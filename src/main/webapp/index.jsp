@@ -1,3 +1,3 @@
 <%
-response.sendRedirect(request.getContextPath() + "/web/welcome");
+response.sendRedirect(request.getContextPath() + "/web/text");
 %>
