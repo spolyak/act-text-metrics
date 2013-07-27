@@ -30,7 +30,7 @@
 
 	<div class="container" id="getting-started">
 		<div class="row">
-			<div class="span8 offset2">
+			<div class="span12">
 
 				<div class="page-header">
 					<h1>Submit Text</h1>
