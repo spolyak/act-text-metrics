@@ -46,6 +46,14 @@ textarea {
 									<td>Paragraph Count</td>
 									<td>${text.paragraphCount}</td>
 								</tr>
+								<tr>
+									<td>Sentence Count</td>
+									<td>${text.sentenceCount}</td>
+								</tr>
+								<tr>
+									<td>Word Count</td>
+									<td>${text.wordCount}</td>
+								</tr>
 							</tbody>
 						</table>
 					</c:if>

@@ -8,6 +8,8 @@ public class Text {
 	
 	//text metrics
 	private int paragraphCount;
+	private int sentenceCount;
+	private int wordCount;
 	
 	public String getValue() {
 		return value;
@@ -31,5 +33,21 @@ public class Text {
 
 	public void setResults(boolean results) {
 		this.results = results;
+	}
+
+	public int getSentenceCount() {
+		return sentenceCount;
+	}
+
+	public void setSentenceCount(int sentenceCount) {
+		this.sentenceCount = sentenceCount;
+	}
+
+	public int getWordCount() {
+		return wordCount;
+	}
+
+	public void setWordCount(int wordCount) {
+		this.wordCount = wordCount;
 	}
 }
