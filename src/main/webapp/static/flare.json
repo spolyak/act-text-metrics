@@ -1,0 +1,83 @@
+{
+ "name": "ACT Core Math",
+ "children": [
+  {
+   "name": "Standards for Mathematical Practice",
+   "children": [
+    {"name": "Make sense of problems and persevere in solving them"},
+    {"name": "Reason abstractly and quantitatively."},
+    {"name": "Construct viable arguments and critique the reasoning of others."},
+    {"name": "Model with mathematics."},    
+    {"name": "Use appropriate tools strategically."},  
+    {"name": "Attend to precision."},  
+    {"name": "Look for and make use of structure."},  
+    {"name": "Look for and express regularity in repeated reasoning."},  
+    {"name": "Model with mathematics."},  
+    {"name": "Model with mathematics."}
+   ]
+  },
+  {
+   "name": "Algebra",
+   "children": [
+    {"name": "Compare numbers."},
+    {"name": "Count to tell number of objects."},
+    {"name": "Pre Algebra.",
+     "children": [
+      {"name": "Estimate Sums"},
+      {"name": "Count forward beginning from a given number within the known sequence (instead of having to begin at 1)."},
+      {"name": "Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects)."}
+     ]
+    }  
+   ]
+  },
+  {
+   "name": "Operations and Algebraic Thinking",
+   "children": [ ]
+  },
+  {
+   "name": "Number and Operations in Base Ten"
+  },
+  {
+   "name": "Measurement and Data"
+  },
+  {
+   "name": "Geometry"
+  },
+  {
+   "name": "Number and Operations - Fractions"
+  },
+  {
+   "name": "Ratio and Proportional Relationships"
+  },
+  {
+   "name": "The Number System"
+  },
+  {
+   "name": "Expressions and Equations"
+    },
+  {
+   "name": "Functions",
+   "children": [
+   ] },
+  {
+   "name": "High School - Number and Quantity",
+   "children": [
+   ] },
+  {
+   "name": "High School - Algebra",
+   "children": [
+   ] },
+  {
+   "name": "High School - Functions",
+   "children": [
+   ] },
+  {
+   "name": "High School - Geometry",
+   "children": [
+   ] },
+  {
+   "name": "High School - Statistics and Probability",
+   "children": [
+   ] }            
+ ]
+}
