@@ -1,5 +1,8 @@
 package com.stevepolyak.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.stevepolyak.model.Text;
@@ -22,9 +25,18 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 
 	@Override
 	public Text compute(Text text) {
-		text.setParagraphCount(paragraphDetector.count((text.getValue())));
-		text.setSentenceCount(sentenceDetector.count((text.getValue())));
-		text.setWordCount(wordDetector.count((text.getValue())));
+		String value = text.getValue();
+		text.setParagraphCount(paragraphDetector.count(value));
+		text.setParagraphs(paragraphDetector.getParagraphs(value));
+
+		List<Integer> lengths = new ArrayList<Integer>();
+		for(String paragraph : text.getParagraphs()) {
+			lengths.add(wordDetector.count(paragraph));
+		}
+		text.setParagraphLengths(lengths.toArray(new Integer[(lengths.size())]));
+		
+		text.setSentenceCount(sentenceDetector.count(value));
+		text.setWordCount(wordDetector.count(value));
 		text.setResults(true);
 		return text;
 	}

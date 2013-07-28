@@ -54,6 +54,14 @@ textarea {
 									<td>Word Count</td>
 									<td>${text.wordCount}</td>
 								</tr>
+								<tr>
+									<td>Paragraph Length (mean)</td>
+									<td>${text.paragraphLengthMean}</td>
+								</tr>
+								<tr>
+									<td>Paragraph Length (sd)</td>
+									<td>${text.paragraphLengthSD}</td>
+								</tr>
 							</tbody>
 						</table>
 					</c:if>

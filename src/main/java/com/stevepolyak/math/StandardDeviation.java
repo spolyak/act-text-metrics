@@ -24,6 +24,10 @@ public class StandardDeviation {
 		// sample.
 		return Math.sqrt(sum / (n - 1));
 	}
+	
+	public static double standardDeviationCalculate(Integer[] data) {
+		return standardDeviationCalculate(copyFromIntArray(data));
+	}
 
 	public static double standardDeviationCalculate(double[] data) {
 		final int n = data.length;
@@ -39,9 +43,17 @@ public class StandardDeviation {
 		}
 		// Change to ( n - 1 ) to n if you have complete data instead of a
 		// sample.
-		return Math.sqrt(sum / (n - 1));
+		return Math.sqrt(sum / n);
 	}
-
+	
+	public static double[] copyFromIntArray(Integer[] source) {
+	    double[] dest = new double[source.length];
+	    for(int i=0; i<source.length; i++) {
+	        dest[i] = source[i];
+	    }
+	    return dest;
+	}
+	
 	public static void main(String[] args) {
 		double[] data = { 10, 100, 50 };
 		System.out.println(standardDeviationMean(data));
