@@ -74,6 +74,18 @@ textarea {
 									<td>Word Length - syllabels (mean)</td>
 									<td>${text.syllabelsLengthMean}</td>
 								</tr>
+								<tr>
+									<td>Word Length - syllabels (sd)</td>
+									<td>${text.syllabelsLengthSD}</td>
+								</tr>
+								<tr>
+									<td>Word Length - letters (mean)</td>
+									<td>${text.wordLengthMean}</td>
+								</tr>
+								<tr>
+									<td>Word Length - letters (sd)</td>
+									<td>${text.wordLengthsSD}</td>
+								</tr>
 							</tbody>
 						</table>
 					</c:if>

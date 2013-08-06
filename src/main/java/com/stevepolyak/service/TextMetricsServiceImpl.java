@@ -54,14 +54,20 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 		text.setWords(wordDetector.getWords(value));
 		
 		List<Integer> wslengths = new ArrayList<Integer>();
+		List<Integer> wordlengths = new ArrayList<Integer>();
 		int syllabelCount = 0;
+		int letterCount = 0;
 		for(String word : text.getWords()) {
 			int wsresult = syllableDetector.count(word);
 			wslengths.add(wsresult);
+			wordlengths.add(word.length());
+			letterCount += word.length();
 			syllabelCount += wsresult;		
 		}
-		text.setSyllableCounts((wslengths.toArray(new Integer[(wslengths.size())])));
+		text.setSyllableCounts(wslengths.toArray(new Integer[(wslengths.size())]));
 		text.setSyllabelCount(syllabelCount);
+		text.setWordLengths(wordlengths.toArray(new Integer[(wordlengths.size())]));
+		text.setLetterCount(letterCount);
 		
 		text.setResults(true);
 		return text;

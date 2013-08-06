@@ -17,6 +17,8 @@ public class Text {
 	private String[] sentences;
 	private Integer[] sentenceLengths;
 	private String[] words;
+	private Integer[] wordLengths;
+	private int letterCount;
 	private Integer[] syllableCounts;
 	private int syllabelCount;
 	private int wordCount;
@@ -140,5 +142,30 @@ public class Text {
 
 	public void setSyllabelCount(int syllabelCount) {
 		this.syllabelCount = syllabelCount;
+	}
+	public float getSyllabelsLengthSD() {
+		return (float) StandardDeviation.standardDeviationCalculate(syllableCounts);
+	}
+
+	public Integer[] getWordLengths() {
+		return wordLengths;
+	}
+
+	public void setWordLengths(Integer[] wordLengths) {
+		this.wordLengths = wordLengths;
+	}
+	public float getWordLengthMean() {
+		return (float) letterCount/wordCount;
+	}
+
+	public int getLetterCount() {
+		return letterCount;
+	}
+
+	public void setLetterCount(int letterCount) {
+		this.letterCount = letterCount;
+	}
+	public float getWordLengthsSD() {
+		return (float) StandardDeviation.standardDeviationCalculate(wordLengths);
 	}
 }
