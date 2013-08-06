@@ -18,6 +18,7 @@ public class ParagraphDetector {
 	}
 	
 	public String[] getParagraphs(String text) {
+		text = text + "\n";
 		String text1 = text.replaceAll("(\r?\n)+", "\n");
 		Matcher m = Pattern.compile("(.*\n)").matcher(text1);
 		List<String> lines = new ArrayList<String>();

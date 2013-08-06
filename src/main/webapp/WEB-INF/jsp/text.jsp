@@ -62,6 +62,18 @@ textarea {
 									<td>Paragraph Length (sd)</td>
 									<td>${text.paragraphLengthSD}</td>
 								</tr>
+								<tr>
+									<td>Sentence Length (mean)</td>
+									<td>${text.sentenceLengthMean}</td>
+								</tr>
+								<tr>
+									<td>Sentence Length (sd)</td>
+									<td>${text.sentenceLengthSD}</td>
+								</tr>
+								<tr>
+									<td>Word Length - syllabels (mean)</td>
+									<td>${text.syllabelsLengthMean}</td>
+								</tr>
 							</tbody>
 						</table>
 					</c:if>
