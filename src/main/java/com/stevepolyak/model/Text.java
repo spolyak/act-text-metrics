@@ -168,4 +168,8 @@ public class Text {
 	public float getWordLengthsSD() {
 		return (float) StandardDeviation.standardDeviationCalculate(wordLengths);
 	}
+	
+	public double getFleschKincaidGradeLevel() {
+	   return (.39*wordCount/sentenceCount)+(11.8*syllabelCount/wordCount)-15.59;
+	}
 }

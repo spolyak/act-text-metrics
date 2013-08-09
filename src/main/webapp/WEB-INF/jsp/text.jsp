@@ -86,6 +86,11 @@ textarea {
 									<td>Word Length - letters (sd)</td>
 									<td>${text.wordLengthsSD}</td>
 								</tr>
+								<tr>
+									<td>Flesch-Kincaid Grade Level</td>
+									<td>${text.getFleschKincaidGradeLevel}</td>
+								</tr>
+								
 							</tbody>
 						</table>
 					</c:if>
