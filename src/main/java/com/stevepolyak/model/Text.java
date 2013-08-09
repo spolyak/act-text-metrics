@@ -20,7 +20,7 @@ public class Text {
 	private Integer[] wordLengths;
 	private int letterCount;
 	private Integer[] syllableCounts;
-	private int syllabelCount;
+	private int syllableCount;
 	private int wordCount;
 	
 	public String getValue() {
@@ -132,18 +132,18 @@ public class Text {
 	public void setWords(String[] words) {
 		this.words = words;
 	}
-	public float getSyllabelsLengthMean() {
-		return (float) syllabelCount/wordCount;
+	public float getSyllablesLengthMean() {
+		return (float) syllableCount/wordCount;
 	}
 
-	public int getSyllabelCount() {
-		return syllabelCount;
+	public int getSyllableCount() {
+		return syllableCount;
 	}
 
-	public void setSyllabelCount(int syllabelCount) {
-		this.syllabelCount = syllabelCount;
+	public void setSyllableCount(int syllabelCount) {
+		this.syllableCount = syllabelCount;
 	}
-	public float getSyllabelsLengthSD() {
+	public float getSyllablesLengthSD() {
 		return (float) StandardDeviation.standardDeviationCalculate(syllableCounts);
 	}
 
@@ -170,6 +170,9 @@ public class Text {
 	}
 	
 	public double getFleschKincaidGradeLevel() {
-	   return (.39*wordCount/sentenceCount)+(11.8*syllabelCount/wordCount)-15.59;
+	   return (.39*(wordCount/sentenceCount))+(11.8*(syllableCount/wordCount))-15.59;
+	}
+	public double getFleschReadingEase() {
+	   return 206.835 - (1.015*(wordCount/sentenceCount)) - (84.6*(syllableCount/wordCount));
 	}
 }

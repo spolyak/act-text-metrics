@@ -9,6 +9,7 @@ import com.stevepolyak.model.Text;
 import com.stevepolyak.text.ParagraphDetector;
 import com.stevepolyak.text.SentenceDetector;
 import com.stevepolyak.text.SyllableDetector;
+import com.stevepolyak.text.SyllableDetector2;
 import com.stevepolyak.text.WordDetector;
 
 @Service
@@ -17,13 +18,13 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 	ParagraphDetector paragraphDetector;
 	SentenceDetector sentenceDetector;
 	WordDetector wordDetector;
-	SyllableDetector syllableDetector;
+	SyllableDetector2 syllableDetector;
 	
 	public TextMetricsServiceImpl() {
 		paragraphDetector = new ParagraphDetector();
 		sentenceDetector = new SentenceDetector();
 		wordDetector = new WordDetector();
-		syllableDetector = new SyllableDetector();
+		syllableDetector = new SyllableDetector2();
 	}
 
 	@Override
@@ -55,17 +56,17 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 		
 		List<Integer> wslengths = new ArrayList<Integer>();
 		List<Integer> wordlengths = new ArrayList<Integer>();
-		int syllabelCount = 0;
+		int syllableCount = 0;
 		int letterCount = 0;
 		for(String word : text.getWords()) {
-			int wsresult = syllableDetector.count(word);
+			int wsresult = syllableDetector.countSyllables(word);
 			wslengths.add(wsresult);
 			wordlengths.add(word.length());
 			letterCount += word.length();
-			syllabelCount += wsresult;		
+			syllableCount += wsresult;		
 		}
 		text.setSyllableCounts(wslengths.toArray(new Integer[(wslengths.size())]));
-		text.setSyllabelCount(syllabelCount);
+		text.setSyllableCount(syllableCount);
 		text.setWordLengths(wordlengths.toArray(new Integer[(wordlengths.size())]));
 		text.setLetterCount(letterCount);
 		

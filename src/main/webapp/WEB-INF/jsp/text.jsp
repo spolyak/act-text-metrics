@@ -71,12 +71,12 @@ textarea {
 									<td>${text.sentenceLengthSD}</td>
 								</tr>
 								<tr>
-									<td>Word Length - syllabels (mean)</td>
-									<td>${text.syllabelsLengthMean}</td>
+									<td>Word Length - syllables (mean)</td>
+									<td>${text.syllablesLengthMean}</td>
 								</tr>
 								<tr>
-									<td>Word Length - syllabels (sd)</td>
-									<td>${text.syllabelsLengthSD}</td>
+									<td>Word Length - syllables (sd)</td>
+									<td>${text.syllablesLengthSD}</td>
 								</tr>
 								<tr>
 									<td>Word Length - letters (mean)</td>
@@ -90,6 +90,10 @@ textarea {
 									<td>Flesch-Kincaid Grade Level</td>
 									<td>${text.fleschKincaidGradeLevel}</td>
 								</tr>
+								<tr>
+									<td>Flesch Reading Ease</td>
+									<td>${text.fleschReadingEase}</td>
+								</tr>					
 								
 							</tbody>
 						</table>
