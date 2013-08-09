@@ -88,7 +88,7 @@ textarea {
 								</tr>
 								<tr>
 									<td>Flesch-Kincaid Grade Level</td>
-									<td>${text.getFleschKincaidGradeLevel}</td>
+									<td>${text.fleschKincaidGradeLevel}</td>
 								</tr>
 								
 							</tbody>
