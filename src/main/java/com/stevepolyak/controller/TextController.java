@@ -34,7 +34,7 @@ public class TextController {
 	public String compute(@ModelAttribute("text") Text text,
 			Map<String, Object> map) {
 
-		tmService.compute(text);
+		tmService.analyze(text);
 		map.put("text", text);
 		return "text";
 	}

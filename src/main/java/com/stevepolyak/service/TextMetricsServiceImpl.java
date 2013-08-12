@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.stevepolyak.model.Text;
 import com.stevepolyak.text.ParagraphDetector;
 import com.stevepolyak.text.SentenceDetector;
-import com.stevepolyak.text.SyllableDetector;
 import com.stevepolyak.text.SyllableDetector2;
 import com.stevepolyak.text.WordDetector;
 
@@ -26,9 +25,19 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 		wordDetector = new WordDetector();
 		syllableDetector = new SyllableDetector2();
 	}
+	
+	public Text formInfo(String value) {
+		return info(value);
+	}
+
+	public Text info(String value) {
+		Text input = new Text();
+		input.setValue(value);
+		return analyze(input);
+	}
 
 	@Override
-	public Text compute(Text text) {
+	public Text analyze(Text text) {
 		String value = text.getValue();
 		text.setParagraphCount(paragraphDetector.count(value));
 		text.setParagraphs(paragraphDetector.getParagraphs(value));
@@ -73,4 +82,5 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 		text.setResults(true);
 		return text;
 	}
+
 }

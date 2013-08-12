@@ -5,6 +5,7 @@ import com.stevepolyak.math.StandardDeviation;
 public class Text {
 
 	private String value;
+	private String textId;
 	
 	private boolean results;
 	
@@ -174,5 +175,13 @@ public class Text {
 	}
 	public double getFleschReadingEase() {
 	   return 206.835 - (1.015*(wordCount/sentenceCount)) - (84.6*(syllableCount/wordCount));
+	}
+
+	public String getTextId() {
+		return textId;
+	}
+
+	public void setTextId(String textId) {
+		this.textId = textId;
 	}
 }
