@@ -171,10 +171,10 @@ public class Text {
 	}
 	
 	public double getFleschKincaidGradeLevel() {
-	   return (.39*(wordCount/sentenceCount))+(11.8*(syllableCount/wordCount))-15.59;
+	   return (.39*((float)wordCount/sentenceCount))+(11.8*((float)syllableCount/wordCount))-15.59;
 	}
 	public double getFleschReadingEase() {
-	   return 206.835 - (1.015*(wordCount/sentenceCount)) - (84.6*(syllableCount/wordCount));
+	   return 206.835 - (1.015*((float)wordCount/sentenceCount)) - (84.6*((float)syllableCount/wordCount));
 	}
 
 	public String getTextId() {

@@ -3,6 +3,7 @@ package com.stevepolyak.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.cxf.rs.security.oauth.provider.OAuthDataProvider;
 import org.springframework.stereotype.Service;
 
 import com.stevepolyak.model.Text;
@@ -18,6 +19,7 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 	SentenceDetector sentenceDetector;
 	WordDetector wordDetector;
 	SyllableDetector2 syllableDetector;
+	private OAuthDataProvider dataProvider;
 	
 	public TextMetricsServiceImpl() {
 		paragraphDetector = new ParagraphDetector();
@@ -81,6 +83,14 @@ public class TextMetricsServiceImpl implements TextMetricsService {
 		
 		text.setResults(true);
 		return text;
+	}
+
+	public OAuthDataProvider getDataProvider() {
+		return dataProvider;
+	}
+
+	public void setDataProvider(OAuthDataProvider dataProvider) {
+		this.dataProvider = dataProvider;
 	}
 
 }
