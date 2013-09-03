@@ -3,7 +3,7 @@ Description [ ![Codeship Status for spolyak/act-text-metrics](https://www.codesh
 
 ACT Text Metrics
 =====
-A program designed to test some ideas for processing natural language text and extracting text indicies.
+A program designed to test some ideas for processing natural language text and extracting text indices.
 
 * [Home](http://act-text-metrics.herokuapp.com/)
 * [Services](http://act-text-metrics.herokuapp.com/services)
