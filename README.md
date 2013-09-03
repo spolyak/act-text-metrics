@@ -5,10 +5,10 @@ ACT Text Metrics
 =====
 A program designed to test some ideas for processing natural language text and extracting text indicies.
 
-* [Home](http://localhost:8080/act-text-metrics/)
-* [Services](http://localhost:8080/act-text-metrics/services)
-* [WADL](http://localhost:8080/act-text-metrics/services/rest?_wadl)
-* [REST Sample](http://localhost:8080/act-text-metrics/services/rest/analyze?value=foo)
+* [Home](http://act-text-metrics.herokuapp.com/)
+* [Services](http://act-text-metrics.herokuapp.com/services)
+* [WADL](http://act-text-metrics.herokuapp.com/services/rest?_wadl)
+* [REST Sample](http://act-text-metrics.herokuapp.com/services/rest/analyze?value=foo)
 
 In progress
 =====
