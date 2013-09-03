@@ -21,3 +21,6 @@ http://localhost:8080/act-text-metrics/services/oauth/initiate
 http://localhost:8080/act-text-metrics/services/oauth/token
 http://localhost:8080/act-text-metrics/services/oauth?_wadl
 http://localhost:8080/act-text-metrics/services/rest/authorize
+
+https://www.codeship.io/projects/803c4be0-f6fe-0130-bd09-22e575f1ccbd/status
+

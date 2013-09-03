@@ -96,11 +96,11 @@
 			<artifactId>guava</artifactId>
 			<version>12.0</version>
 		</dependency>
-		
+		<!--  
 		
 		<dependency> <groupId>com.github.jsimone</groupId> <artifactId>webapp-runner</artifactId> 
 			<version>7.0.34.0</version> <scope>provided</scope> </dependency> 
-		
+		-->
 		 
 		<dependency>
   	      <groupId>org.apache.cxf</groupId>
@@ -138,6 +138,13 @@
 			<artifactId>cxf-api</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
+		
+		<dependency> 
+			<groupId>net.sf.extjwnl</groupId>
+			<artifactId>extjwnl</artifactId> 
+      	    <version>1.5</version> 
+      	</dependency> 
+
 	</dependencies>
 
 	<build>
