@@ -155,43 +155,99 @@
 	</dependencies>
 
 	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.github.jsimone</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>7.0.34.0</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-new-relic</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>com.newrelic.agent.java</includeGroupIds>
+							<includeArtifactIds>newrelic-agent</includeArtifactIds>
+							<stripVersion>true</stripVersion>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
 			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
 				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
 					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.6,)
+										</versionRange>
+										<goals>
+											<goal>
+												copy-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
-				<plugin>
-					<artifactId>maven-war-plugin</artifactId>
-					<version>2.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.6</version>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>copy</goal>
-							</goals>
-							<configuration>
-								<artifactItems>
-									<artifactItem>
-										<groupId>com.github.jsimone</groupId>
-										<artifactId>webapp-runner</artifactId>
-										<version>7.0.34.0</version>
-										<destFileName>webapp-runner.jar</destFileName>
-									</artifactItem>
-								</artifactItems>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
 			</plugins>
-
+		</pluginManagement>
 	</build>
 
 </project>
